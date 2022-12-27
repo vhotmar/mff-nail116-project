@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-esm ./src/index.ts"
+    "dev": "ts-node-esm ./src/index.ts",
+    "lint": "eslint --ext .js,.ts .",
+    "format": "prettier --ignore-path .gitignore --write \"src/**/*.+(js|ts|json)\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@toolbuilder/await-for-it": "^1.3.1",
+    "async-iterable-queue": "^1.0.11",
     "country-locator": "^2.1.1",
     "csv-parse": "^5.3.3",
     "date-fns": "^2.29.3",
@@ -21,9 +25,19 @@
     "iter-ops": "^3.0.7",
     "p-queue": "^7.3.0",
     "trainline-stations": "^2.0.1",
+    "ts-async-iterable-queue": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
     "zod": "^3.20.2"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.8.1"
+  }
 }

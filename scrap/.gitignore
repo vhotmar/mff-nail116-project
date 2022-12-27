@@ -1,4 +1,7 @@
 node_modules/
 .cache/
-graph_all.json
+graph.json
+graph.json-*
+progress.json
+progress.json-*
 stations.json
